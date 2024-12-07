@@ -4,7 +4,8 @@ from werkzeug.utils import secure_filename
 import cv2 as cv
 from PIL import Image
 from rembg import remove
-app = Flask(__name__)
+app = Flask(__name__, template_folder="D:/Image Process/Templates")
+
 
 
 UPLOAD_FOLDER = 'static/uploads'
