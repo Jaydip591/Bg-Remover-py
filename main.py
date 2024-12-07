@@ -84,5 +84,6 @@ def process_image(filename, operation):
 @app.route('/about')
 def about():
     return render_template('about.html', title= 'About')
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
