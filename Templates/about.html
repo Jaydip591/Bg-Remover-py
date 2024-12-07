@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- About Section -->
+        <h2>About Me</h2>
+        <p>Hi! I'm <strong>Jaydip</strong>. I'm currently pursuing my BCA (Bachelor of Computer Applications) in India. I am passionate about technology, especially in areas like Artificial Intelligence and machine learning. In 2025, I plan to study abroad to further my expertise in Artificial Intelligence and Machine Learning.</p>
+        
+        <h4>Study Details</h4>
+        <ul>
+          <li><strong>Course:</strong> Bachelor of Computer Applications (BCA)</li>
+          <li><strong>University:</strong> Sankalchand Patel University</li>
+          <li><strong>Current Year:</strong> 5th Semester</li>
+          <li><strong>Field of Interest:</strong> Python, Machine Learning</li>
+          <li><strong>Goal:</strong> Pursue Master's in AI and ML abroad in 2025</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6 d-flex justify-content-end align-items-start mb-3 pb-3 pt-0">
+        <!-- Image Section (Optional) -->
+        <img src="{{ url_for('static', filename='IMG_2219.jpg') }}" class="img-fluid rounded-circle" alt="Jaydip's Image">
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 PixelFlow. All Rights Reserved.</p>
+  </footer>
+
+{% endblock content%}
+
+

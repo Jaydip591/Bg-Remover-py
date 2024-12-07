@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container my-4">
+  <h1 class="fs-3 text ">
+    PixelFlow- Edit your image
+  </h1>
+<form action="/edit" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+
+    <div class="mb-3 my-4">
+        <label for="formFileSm" class="form-label">Upload Your Image</label>
+        <input class="form-control form-control-sm" name="file" id="formFileSm" type="file">
+      </div>
+      <div class="form-floating">
+        <select name="operation" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>Select</option>
+          <option value="ctogray">convert to GrayScale</option>
+          <option value="ctopng">covert to png</option>
+          <option value="ctopdf">conver to pdf</option>
+          <option value="removebg">Remove Background</option>
+        </select>
+        <label for="floatingSelect">Select an Operation</label>
+    </div>
+</div>
+
+    <button type="submit" class="btn btn-primary ">Submit</button>
+    {% if final_image %}
+    <div class="mt-5">
+        <h4>Processed Image:</h4>
+        <img src="{{ final_image }}" class="img-fluid rounded border" alt="Processed Image">
+    </div>
+    <div class="mt-3">
+        <a href="{{ final_image }}" download class="btn btn-primary">Download</a>
+    </div>
+    {% endif %}
+</form>
+</div>
+{% endblock content%}
